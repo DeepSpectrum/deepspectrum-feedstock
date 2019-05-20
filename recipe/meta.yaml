@@ -1,0 +1,55 @@
+{% set data = load_setup_py_data() %}
+
+package:
+  name: deepspectrum
+  version: {{ data['version'] }}
+
+source:
+  path: ..
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+  entry_points:
+    - deepspectrum = deepspectrum.__main__:cli
+
+
+requirements:
+  build:
+    - python >=3.6,{{PY_VER}}*
+    - setuptools
+
+  run:
+    - python {{PY_VER}}*
+    - click>=7.0
+    - imread>=0.7.1
+    - librosa>=0.6.3
+    - matplotlib>=3.0.3
+    - numpy>=1.16.3
+    - opencv>=4.1.0
+    - pillow>=6.0.0
+    - scipy>=1.2.1
+    - tensorflow-gpu>=1.12.0
+    - tqdm>=4.32.1
+
+test:
+  source_files:
+    - tests/*
+    - examples/*
+  imports:
+    - deepspectrum
+  requires:
+    - pytest>=4.4.1
+    - pytest-cov>=2.7.1
+  commands:
+    - pytest -vv --cov deepspectrum tests/
+
+about:
+  home: data['url']
+  license: GPL v3
+  license_file: LICENSE.md
+  license_family: GPL
+
+  summary: data['description']
+  description: data['long_description']
+  dev_url: data['url']
