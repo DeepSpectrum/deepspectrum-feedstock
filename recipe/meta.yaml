@@ -7,8 +7,7 @@ package:
 
 source:
   url: https://github.com/DeepSpectrum/{{name}}/archive/v{{ version }}.tar.gz
-  sha256: 603fbb2d0614dfdbba8a2243569ad54f2e1123bf38d3f851a1946e708cbea0ee
-
+  sha256: 6579fcab2a0fa9b7e7dd3deb538b38d3d4c1b34f7c18fb77f3f2bc61c9a8db65
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
@@ -32,8 +31,8 @@ requirements:
     - opencv>=4.1.0
     - pillow>=6.0.0
     - scipy>=1.2.1
-    - tensorflow-gpu>=1.13.0 # [not osx]
-    - tensorflow>=1.13.0 # [osx]
+    - tensorflow-gpu>=1.13.0 # [linux]
+    - tensorflow>=1.13.0 # [not linux]
     - tqdm>=4.32.1
 
 test:
