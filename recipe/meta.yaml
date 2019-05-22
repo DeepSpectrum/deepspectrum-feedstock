@@ -18,11 +18,12 @@ build:
 requirements:
   build:
     - python>=3.6,{{PY_VER}}* # [not osx]
-    - python=3.6.*,{{PY_VER}}* # [osx]
+    - python 3.6.* # [osx]
     - setuptools
 
   run:
-    - python {{PY_VER}}*
+    - python {{PY_VER}}* # [not osx]
+    - python 3.6.* # [osx]
     - mesa-libgl-cos6-x86_64 # [linux]
     - click>=7.0
     - imread>=0.7.1
