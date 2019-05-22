@@ -16,6 +16,13 @@ Current build status
 
 
 <table><tr>
+    <td>CircleCI</td>
+    <td>
+      <a href="https://circleci.com/gh/DeepSpectrum/deepspectrum-feedstock">
+        <img alt="Linux" src="https://img.shields.io/circleci/project/github/DeepSpectrum/deepspectrum-feedstock/master.svg?label=Linux">
+      </a>
+    </td>
+  </tr><tr>
     <td>Travis</td>
     <td>
       <a href="https://travis-ci.org/DeepSpectrum/deepspectrum-feedstock">
