@@ -10,6 +10,9 @@ env:
 
 matrix:
   include:
+    - env: CONFIG=linux_ UPLOAD_PACKAGES=True PLATFORM=linux-64
+      os: linux
+
     - env: CONFIG=osx_ UPLOAD_PACKAGES=True PLATFORM=osx-64
       os: osx
       osx_image: xcode9.4
@@ -17,3 +20,5 @@ matrix:
 script:
 
   - if [[ ${PLATFORM} =~ .*osx.* ]]; then ./.travis/run_osx_build.sh; fi
+
+  - if [[ ${PLATFORM} =~ .*linux.* ]]; then pip install shyaml --user && ./.travis/run_docker_build.sh; fi
