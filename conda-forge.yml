@@ -3,22 +3,22 @@ github:
   repo_name: deepspectrum-feedstock
 channels:
   sources:
-    - conda-forge
-    - defaults
+  - conda-forge
+  - defaults
   targets:
-    - ["DeepSpectrum", "main"]
-travis:
-  secure:
-    BINSTAR_TOKEN: MKssfgauqxRzcyEsJXffz9E8dJsHpO0tDfJiVySidhwMXBiuexhsjU4cJbcJEO+kvmK10WhzLCbOVhM6Wjy4udX+sQcIGlO4AgDjEcMkUd0HTOjDXGhvdQr6l3eJ55Isvn9RAFXilzyc8dqNd0DUgvg65glmOLQDbdIb2w3GKKg45epTFyuqTEI/5rGdj9GEw1tJcyh8XgD+ZiZkzJWQWPc1xXuOvIGsaTdJm2r3jW11Dss3TosQ/ypoVjmwZV67jtJHJ681BMdgkABPBOSCO6QD5P2+O6mxxbbG0MnkOkyraA2i5EMBYiI+g7z8PC7YIqvOJo4+oopqnN4CFeMyV0selOOY0f/PJGLUYdsvUjaHLk7tyCQHCfQqoa1f3rxLP0WRySq0FrNFIYFiT4c1TgjOG8s+WOhnWw/6ZIHrZoYtXlkoSWSxu/2wCbrmCOA0cInog6nIsXb04vlH8a1YSxvKD/YPU8FJ+GULDdt7iMsX9Vg8MWq5/wBiT8XL0weqZfDBBO484DKjKjRha3v81PGemqjUEIdev5sZF+SzKpSe1prWIMX6nfhOPgr8nmedciIWKB2RuvCTGWunvp71zrhV89kl7P0cvumwY/7tICHM3MTWzSmAFYaPZV4Wk3GvW3NxmlrVBNixOY+ykphNvTN41+j+u3HmRepSmhTtaak=
+  - [DeepSpectrum, main]
 provider:
   osx: travis
   linux: travis
   win: appveyor
   linux_aarch64: None
   linux_ppc64le: None
+azure:
+  upload_packages: false
+  force: false
+travis:
+  secure:
+    BINSTAR_TOKEN: MxUIy6LNSvzhGx4GTgsxvaZ53Z4QbqvZM90RgbhGuHnBFmxrPaHo87Mycw1M0sKh8GzdyoQ3Udve15Z2+mM2qMYxZQkgJWK4hYqyImWdiWqE3kEEXDb34GwQ2P8oUWXcPBc6Q6WKS91L7p0/wHkhOHWks3vG+Zz27I/9pO4ylAtb6vC5eVWl7jX6gl1CSTfypdMw+dJKG1gJmYu67zq2MaAaanyl5vjLBhbJHPFeiO+uDp1D4T1LpY87uA0wd3CUP4cG18oV/zYgZnZ/t6ybXmT6FbifAdXhWdWsmDgLE0eq6oMMWgrZc6jqjzai0v3dJcFavjb32Y5bOPmyaobCC1d/h3LguRVcJoJmkjQSTjWUtKBEdZCrr5Q2IwF+pL8+6eeFyiHVqFgeZCLBIeQSh+VmztNtBgW3dQYdKTiyB2skHqy/iwlWz1Z3UcRj6JIIJrWXrPUyUkQ0hxvyH9o+rhFJYltLhfvrr4nNyAQRo0O1fFEC2tgsFr2kXOw6hzEXv4YZ5KuVXbL7F2fcsmHLHNI9TDgN4+FpSEceHmRXhnI3UJ+5awnH2y6Au2ReCwSbfOZytcN/JWdvsHmf5Vs0LVO4QeZYj/QSQaOGcXPy8maIKrPaiLnicyRJq2rzToPHzNo4EMwFcaiU1igQqar5vSNE5mWWxz7f7MfBIM2gjIQ=
 appveyor:
   secure:
-    BINSTAR_TOKEN: GQWbR7p2RUuwc3g2INvq/bMx27HdaL0OmmkP4Tur59I=
-azure:
-  upload_packages: False
-  force: False
+    BINSTAR_TOKEN: vHnzv5MZIj7aLMjUP3vE/ySuXpID44XYdl/NxfdBT3E1QPBqewcxFIeF7bs5Pu6Z
