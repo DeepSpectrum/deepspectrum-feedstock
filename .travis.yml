@@ -3,10 +3,16 @@
 
 language: generic
 
-
+env:
+  global:
+    # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
+    - secure: "MxUIy6LNSvzhGx4GTgsxvaZ53Z4QbqvZM90RgbhGuHnBFmxrPaHo87Mycw1M0sKh8GzdyoQ3Udve15Z2+mM2qMYxZQkgJWK4hYqyImWdiWqE3kEEXDb34GwQ2P8oUWXcPBc6Q6WKS91L7p0/wHkhOHWks3vG+Zz27I/9pO4ylAtb6vC5eVWl7jX6gl1CSTfypdMw+dJKG1gJmYu67zq2MaAaanyl5vjLBhbJHPFeiO+uDp1D4T1LpY87uA0wd3CUP4cG18oV/zYgZnZ/t6ybXmT6FbifAdXhWdWsmDgLE0eq6oMMWgrZc6jqjzai0v3dJcFavjb32Y5bOPmyaobCC1d/h3LguRVcJoJmkjQSTjWUtKBEdZCrr5Q2IwF+pL8+6eeFyiHVqFgeZCLBIeQSh+VmztNtBgW3dQYdKTiyB2skHqy/iwlWz1Z3UcRj6JIIJrWXrPUyUkQ0hxvyH9o+rhFJYltLhfvrr4nNyAQRo0O1fFEC2tgsFr2kXOw6hzEXv4YZ5KuVXbL7F2fcsmHLHNI9TDgN4+FpSEceHmRXhnI3UJ+5awnH2y6Au2ReCwSbfOZytcN/JWdvsHmf5Vs0LVO4QeZYj/QSQaOGcXPy8maIKrPaiLnicyRJq2rzToPHzNo4EMwFcaiU1igQqar5vSNE5mWWxz7f7MfBIM2gjIQ="
 
 matrix:
   include:
+    - env: CONFIG=linux_ UPLOAD_PACKAGES=True PLATFORM=linux-64
+      os: linux
+
     - env: CONFIG=osx_ UPLOAD_PACKAGES=True PLATFORM=osx-64
       os: osx
       osx_image: xcode9.4
@@ -14,3 +20,5 @@ matrix:
 script:
 
   - if [[ ${PLATFORM} =~ .*osx.* ]]; then ./.travis/run_osx_build.sh; fi
+
+  - if [[ ${PLATFORM} =~ .*linux.* ]]; then pip install shyaml --user && ./.travis/run_docker_build.sh; fi
