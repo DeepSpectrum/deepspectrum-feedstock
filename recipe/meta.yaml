@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/DeepSpectrum/{{name}}/archive/v{{ version }}.tar.gz
-  sha256: 5acf69f48bfb88a931f2cddc984a8a97a7866992a59603718e554c840f113b9f
+  sha256: 834bd404d0aac1e753104577b32ee81893fccc468fc122a74b10435594f53200
 
 build:
   number: 0
