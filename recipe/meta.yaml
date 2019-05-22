@@ -17,7 +17,8 @@ build:
 
 requirements:
   build:
-    - python >=3.6,{{PY_VER}}*
+    - python>=3.6,{{PY_VER}}* # [not osx]
+    - python=3.6.*,{{PY_VER}}* # [osx]
     - setuptools
 
   run:
