@@ -7,7 +7,7 @@ Package license: GPL v3
 
 Feedstock license: BSD 3-Clause
 
-Summary: 
+Summary: A tool for extracting deep CNN-descriptors from audio data.
 
 
 
@@ -89,4 +89,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@DeepSpectrum](https://github.com/DeepSpectrum/)
+* [@mauricege](https://github.com/mauricege/)
 
