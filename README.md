@@ -1,15 +1,15 @@
 About deepspectrum
 ==================
 
-Home: data
+Home: https://github.com/DeepSpectrum/DeepSpectrum
 
 Package license: GPL v3
 
 Feedstock license: BSD 3-Clause
 
-Summary: data
+Summary: 
 
-data
+
 
 Current build status
 ====================
