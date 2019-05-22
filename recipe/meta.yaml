@@ -1,11 +1,13 @@
-{% set data = load_setup_py_data() %}
+{% set name = "DeepSpectrum" %}
+{% set version = "0.5.2" %}
 
 package:
-  name: deepspectrum
-  version: {{ data['version'] }}
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  path: ..
+  url: https://github.com/DeepSpectrum/{{name}}/archive/v{{ version }}.tar.gz
+  sha256: 5acf69f48bfb88a931f2cddc984a8a97a7866992a59603718e554c840f113b9f
 
 build:
   number: 0
@@ -45,11 +47,14 @@ test:
     - pytest -vv --cov deepspectrum tests/
 
 about:
-  home: data['url']
+  home: https://github.com/DeepSpectrum/DeepSpectrum
   license: GPL v3
   license_file: LICENSE.md
   license_family: GPL
+  dev_url: https://github.com/DeepSpectrum/DeepSpectrum
+  summary: 'A tool for extracting deep CNN-descriptors from audio data.'
 
-  summary: data['description']
-  description: data['long_description']
-  dev_url: data['url']
+extra:
+  recipe-maintainers:
+    - DeepSpectrum
+    - mauricege
