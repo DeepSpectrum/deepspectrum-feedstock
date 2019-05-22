@@ -1,5 +1,5 @@
 {% set name = "DeepSpectrum" %}
-{% set version = "0.5.3" %}
+{% set version = "0.5.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/DeepSpectrum/{{name}}/archive/v{{ version }}.tar.gz
-  sha256: 834bd404d0aac1e753104577b32ee81893fccc468fc122a74b10435594f53200
+  sha256: 603fbb2d0614dfdbba8a2243569ad54f2e1123bf38d3f851a1946e708cbea0ee
 
 build:
   number: 0
@@ -23,6 +23,7 @@ requirements:
 
   run:
     - python {{PY_VER}}*
+    - mesa-libgl-cos6-x86_64 # [linux]
     - click>=7.0
     - imread>=0.7.1
     - librosa>=0.6.3
