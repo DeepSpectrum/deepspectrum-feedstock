@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 build_number_decrement:
 - '0'
 channel_sources:
-- conda-forge,defaults
+- conda-forge,defaults,asmeurer
 channel_targets:
 - DeepSpectrum main
 docker_image:
