@@ -5,6 +5,7 @@ channels:
   sources:
   - conda-forge
   - defaults
+  - asmeurer
   targets:
   - [DeepSpectrum, main]
 provider:
