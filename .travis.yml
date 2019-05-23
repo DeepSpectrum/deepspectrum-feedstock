@@ -12,7 +12,6 @@ matrix:
   include:
     - env: CONFIG=linux_ UPLOAD_PACKAGES=True PLATFORM=linux-64
       os: linux
-      dist: bionic
 
     - env: CONFIG=osx_ UPLOAD_PACKAGES=True PLATFORM=osx-64
       os: osx
