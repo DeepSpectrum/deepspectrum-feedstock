@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/DeepSpectrum/{{name}}/archive/v{{ version }}.tar.gz
-  sha256: 6579fcab2a0fa9b7e7dd3deb538b38d3d4c1b34f7c18fb77f3f2bc61c9a8db65
+  sha256: 13cc590091ec263d55e96ba478a72e2745f4b7110e0899ec1763013ab02d01c1
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
