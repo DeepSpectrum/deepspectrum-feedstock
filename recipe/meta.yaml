@@ -25,7 +25,6 @@ requirements:
     - python>=3.6 # [not osx]
     - python=3.6.* # [osx]
     - mesa-libgl-cos6-x86_64 # [linux]
-    - glibc>=2.16 # [linux]
     - click>=7.0
     - ffmpeg # [win]
     - imread>=0.7.1
