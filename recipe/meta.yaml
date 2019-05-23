@@ -35,7 +35,7 @@ requirements:
     - pillow>=6.0.0
     - scipy>=1.2.1
     - tensorflow=1.13.* # [not linux]
-    - tensorflow-gpu=1.13.* # [linux]
+    - tensorflow-gpu=1.13.0 # [linux]
     - tqdm>=4.32.1
 
 test:
