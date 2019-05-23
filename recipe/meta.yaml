@@ -17,13 +17,13 @@ build:
 
 requirements:
   build:
-    - python>=3.6 # [not osx]
-    - python=3.6.* # [osx]
+    - python>=3.6 # [win]
+    - python=3.6.* # [not win]
     - setuptools
 
   run:
-    - python>=3.6 # [not osx]
-    - python=3.6.* # [osx]
+    - python>=3.6 # [win]
+    - python=3.6.* # [not win]
     - mesa-libgl-cos6-x86_64 # [linux]
     - click>=7.0
     - ffmpeg # [win]
