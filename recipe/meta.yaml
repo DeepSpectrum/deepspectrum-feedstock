@@ -20,7 +20,6 @@ requirements:
     - python>=3.6 # [win]
     - python=3.6.* # [not win]
     - setuptools
-  host:
     - tensorflow=1.12.* # [linux]
   run:
     - python>=3.6 # [not osx]
