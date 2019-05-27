@@ -33,7 +33,7 @@ requirements:
     - pillow>=6.0.0
     - scipy>=1.2.1
     - tensorflow>=1.12.0 # [osx]
-    - tenstoflow-gpu>=1.12.0 # [not osx]
+    - tensorflow-gpu>=1.12.0 # [not osx]
     - tqdm>=4.32.1
 
 test:
