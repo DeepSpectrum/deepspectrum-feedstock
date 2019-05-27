@@ -17,8 +17,7 @@ build:
 
 requirements:
   build:
-    - python>=3.6 # [win]
-    - python=3.6.* # [not win]
+    - python
     - setuptools
   run:
     - python>=3.6 # [not osx]
@@ -33,7 +32,8 @@ requirements:
     - opencv>=4.1.0
     - pillow>=6.0.0
     - scipy>=1.2.1
-    - tensorflow>=1.12.0
+    - tensorflow>=1.12.0 # [osx]
+    - tenstoflow-gpu>=1.12.0 # [not osx]
     - tqdm>=4.32.1
 
 test:
@@ -45,8 +45,9 @@ test:
   requires:
     - pytest>=4.4.1
     - pytest-cov>=2.7.1
-    - tensorflow=1.12.* # [linux]
+    - tensorflow>=1.12.0 # [win]
   commands:
+    skip: linux
     - pytest -vv --cov deepspectrum tests/
 
 about:
