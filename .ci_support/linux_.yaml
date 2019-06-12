@@ -1,5 +1,5 @@
 channel_sources:
-- conda-forge,defaults
+- conda-forge,pytorch,defaults
 channel_targets:
 - DeepSpectrum main
 docker_image:

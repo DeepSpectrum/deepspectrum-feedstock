@@ -1,7 +1,7 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
 channel_sources:
-- conda-forge,defaults
+- conda-forge,pytorch,defaults
 channel_targets:
 - DeepSpectrum main
 macos_machine:
