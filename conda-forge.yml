@@ -4,6 +4,7 @@ github:
 channels:
   sources:
   - conda-forge
+  - pytorch
   - defaults
   targets:
   - [DeepSpectrum, main]
