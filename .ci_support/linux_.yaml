@@ -1,3 +1,5 @@
+build_number_decrement:
+- '0'
 channel_sources:
 - conda-forge,pytorch,defaults
 channel_targets:
