@@ -51,7 +51,7 @@ test:
     - pytest>=4.4.1
     - pytest-cov>=2.7.1
   commands:
-    - pytest -vv --cov deepspectrum tests/ # [not linux]
+    - pytest -vv --cov deepspectrum tests/ # [windows]
 
 about:
   home: https://github.com/DeepSpectrum/DeepSpectrum
