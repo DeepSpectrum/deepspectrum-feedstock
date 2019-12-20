@@ -17,11 +17,11 @@ build:
 
 requirements:
   build:
-    - python>=3.6.0 # [not osx]
+    - python=3.7.* # [not osx]
     - python=3.6.* # [osx]
     - setuptools
   run:
-    - python>=3.6 # [not osx]
+    - python=3.7.* # [not osx]
     - python=3.6.* # [osx]
     - mesa-libgl-cos6-x86_64 # [linux]
     - click>=7.0
