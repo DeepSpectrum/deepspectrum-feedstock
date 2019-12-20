@@ -1,5 +1,5 @@
 {% set name = "DeepSpectrum" %}
-{% set version = "0.6.1" %}
+{% set version = "0.6.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/DeepSpectrum/{{name}}/archive/v{{ version }}.tar.gz
-  sha256: f243fe5d850e6811f5c9718fae6d8150db948753945430d0d69d39272b726bb3
+  sha256: 794dc063cab5981eba15ab466c20687252ab3f53ae811ba348390dc8399cd022
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
@@ -37,8 +37,8 @@ requirements:
     - pytorch>=1.1.0 # [osx]
     - torchvision>=0.3 # [osx]
     - scipy>=1.2.1
-    - tensorflow>=1.12.0 # [not linux]
-    - tensorflow-gpu>=1.12.0 # [linux]
+    - tensorflow >=1.12.0, <2 # [not linux]
+    - tensorflow-gpu >=1.12.0, <2 # [linux]
     - tqdm>=4.32.1
 
 test:
