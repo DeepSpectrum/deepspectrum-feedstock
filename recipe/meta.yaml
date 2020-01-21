@@ -1,5 +1,5 @@
 {% set name = "DeepSpectrum" %}
-{% set version = "0.6.4" %}
+{% set version = "0.6.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/DeepSpectrum/{{name}}/archive/v{{ version }}.tar.gz
-  sha256: 77d2c704bfb437b67940c4c259e3b1d89e54116a46505944fb7dae4eac52acba
+  sha256: 23f5c097f2e1054897892cbff958ead3dea526eeeedee8e503a869870d811773
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
