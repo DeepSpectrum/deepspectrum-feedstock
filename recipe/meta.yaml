@@ -11,7 +11,7 @@ source:
   git_depth: -1 
 
 build:
-  number: 1
+  number: 2
   script: python setup.py install --single-version-externally-managed --record=record.txt
   entry_points:
     - deepspectrum = deepspectrum.__main__:cli
@@ -40,6 +40,7 @@ requirements:
     - tensorflow >=1.12.0, <2 # [not linux]
     - tensorflow-gpu >=1.12.0, <2 # [linux]
     - tqdm>=4.32.1
+    - xarray
 
 test:
   source_files:
@@ -47,6 +48,7 @@ test:
     - examples/*
   imports:
     - deepspectrum
+    - audeep
   requires:
     - pytest>=4.4.1
     - pytest-cov>=2.7.1
