@@ -6,10 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/DeepSpectrum/{{name}}/archive/v{{ version }}.tar.gz
-  sha256: f97b21544248aaac27fbba3030d93d10f67b41b542f3aea2934f7783783f9537
+  git_url: https://github.com/DeepSpectrum/{{name}}.git
+  git_rev: {{ version }}
+  git_depth: -1 
+
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record=record.txt
   entry_points:
     - deepspectrum = deepspectrum.__main__:cli
