@@ -7,11 +7,11 @@ package:
 
 source:
   git_url: https://github.com/DeepSpectrum/{{name}}.git
-  git_rev: v{{ version }}
+  git_rev: fed3c9db3785a6d5379e75e2d0eac596981115b8
   git_depth: -1 
 
 build:
-  number: 2
+  number: 3
   script: python setup.py install --single-version-externally-managed --record=record.txt
   entry_points:
     - deepspectrum = deepspectrum.__main__:cli
